@@ -1,0 +1,14 @@
+.profileInfo{
+    margin-top: 500px;
+    /* top: 200px; */
+    margin-bottom: 50px;
+    border: 2px solid blue;
+}
+
+.userName{
+    font-size: 30px;
+    font-weight: bolder;
+    color: red;
+    margin-top: 80px;
+    text-align: center;
+}
