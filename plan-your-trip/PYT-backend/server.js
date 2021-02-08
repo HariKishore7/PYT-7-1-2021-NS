@@ -84,7 +84,7 @@ app.post("/login", async (req, res) => {
 });
 
 const AuthMiddleware = async (req, res, next) => {
-  console.log('Session', req.session);
+  console.log('Session displaying Here : ', req.session);
 // added user key to req
 if (isNullOrUndefined(req.session) || isNullOrUndefined(req.session.userId) ) {
   res.status(401).send({ err: "Not logged in" });
@@ -126,6 +126,6 @@ app.post("/booking", AuthMiddleware, async (req, res) => {
 
 app.get('/userinfo',AuthMiddleware, async(req,res)=>{
   const userDetail = await User.findById(req.session.userId);
-  console.log("user details",userDetail);
+  console.log("user details here Displaying",userDetail);
   res.send({userName: userDetail.username});
 });
